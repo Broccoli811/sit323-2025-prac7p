@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app
+  template:
+    metadata:
+      labels:
+        app: app
+    spec:
+      containers:
+        - name: app
+          image: prepaidtrash811/sit323-2025-prac7p-app:latest
+          ports:
+            - containerPort: 3000
+          env:
+          - name: PORT
+            value: "3000"
+          - name: HOST
+            value: "0.0.0.0"
+          - name: MONGO_URL
+            value: "mongodb://mongodb-service:27017"
+          - name: DB_NAME
+            value: "mydatabase"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: app
+spec:
+  selector:
+    app: app
+  ports:
+    - port: 3000
+      targetPort: 3000
