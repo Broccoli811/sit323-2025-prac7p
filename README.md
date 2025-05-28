@@ -43,3 +43,26 @@ Update: Sent a PUT request to /update/:id to modify a user.
 Delete: Sent a DELETE request to /delete/:id to remove a user.
 
 <img width="965" alt="John with CRUD ops" src="https://github.com/user-attachments/assets/3dca6661-b2be-48af-b0e5-b8c18567fc03" />
+
+10. Prepare project for backups using cronjob. Create the backup.yaml and backup-pv-yaml files, apply them
+<img width="860" alt="image" src="https://github.com/user-attachments/assets/39dc4942-3245-4608-84bd-e575df672da8" />
+<img width="860" alt="image" src="https://github.com/user-attachments/assets/90b0288a-a7b1-451f-84e3-438a91b94d25" />
+
+11. Insert data for backup
+<img width="1065" alt="image" src="https://github.com/user-attachments/assets/8d47f50b-f1b1-4551-9ab7-bb5f145f400d" />
+
+12. Create a new debug-backup-pod.yaml
+<img width="1229" alt="image" src="https://github.com/user-attachments/assets/fe8d5621-817d-41cb-8102-c33887ed9dda" />
+
+13. check if the data was backed up
+<img width="713" alt="image" src="https://github.com/user-attachments/assets/b793cdf9-f2eb-458a-afcc-674210986710" />
+
+14. Install metrics server for monitoring
+<img width="1052" alt="image" src="https://github.com/user-attachments/assets/876a4600-a49c-42ae-b714-28650de6b8ae" />
+
+15. Check pod status and query the metrics
+<img width="779" alt="image" src="https://github.com/user-attachments/assets/67d2d374-4d01-4c7a-9953-7b311baa09ce" />
+<img width="595" alt="image" src="https://github.com/user-attachments/assets/85cb6fe4-fc8e-4feb-82d4-abadec6d6292" />
+
+16. Check Docker-Desktop for metrics and monitoring
+<img width="1371" alt="image" src="https://github.com/user-attachments/assets/89e09cb6-0aac-4c6a-b45a-60bd38543bff" />
