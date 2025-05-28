@@ -1,6 +1,6 @@
 # step-by-step instructions
 
-1. Deployed MongoDB in your Kubernetes cluster using a Deployment and a Service. Ensure the Service used a ClusterIP and gave it the name mongodb-service for internal access.
+1. Deployed MongoDB in the Kubernetes cluster using a Deployment and a Service. Ensure the Service used a ClusterIP and gave it the name mongodb-service for internal access.
 <img width="817" alt="image" src="https://github.com/user-attachments/assets/ece7161d-9777-4552-8ae8-686d34bf3214" />
 <img width="845" alt="image" src="https://github.com/user-attachments/assets/f821f353-0a1f-4d46-9e60-4d78dd56caf8" />
 
@@ -20,13 +20,13 @@
 <img width="617" alt="install mongoDB" src="https://github.com/user-attachments/assets/18147f7b-2fb9-414f-8e2e-0fa4fc268228" />
 <img width="682" alt="apply files" src="https://github.com/user-attachments/assets/beea09a8-c787-405a-a6a6-2913fe7892d7" />
 
-5. Check pods and logs to see issues
+5. Check pods and app logs to see issues
 <img width="673" alt="check status or check logs" src="https://github.com/user-attachments/assets/5ebaea86-3fce-4518-ac81-5498e64db430" />
 
 6. checked your app’s logs using kubectl logs and confirmed the app was successfully connecting to MongoDB.
 <img width="973" alt="Connected to MongoDB" src="https://github.com/user-attachments/assets/30ac1cb7-e232-423d-9702-ccfea70c86fb" />
 
-7. Build and Push
+7. Build and Push the image
 <img width="932" alt="build and push" src="https://github.com/user-attachments/assets/bc928e2e-d86f-4b2b-993a-1d747e557159" />
 
 8. Restart and Portforward
