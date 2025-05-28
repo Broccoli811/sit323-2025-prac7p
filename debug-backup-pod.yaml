@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: debug-backup-pod
+spec:
+  containers:
+  - name: debug
+    image: alpine
+    command: ["sleep", "3600"]
+    volumeMounts:
+    - mountPath: /backup
+      name: backup-storage
+  volumes:
+  - name: backup-storage
+    persistentVolumeClaim:
+      claimName: mongo-backup-pvc
+

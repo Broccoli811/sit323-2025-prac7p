@@ -1,0 +1,26 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: mongo-backup
+spec:
+  schedule: "0 */6 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: mongo-backup
+            image: mongo:5
+            command:
+              - /bin/sh
+              - -c
+              - |
+                mongodump --host mongodb-service --port 27017 --out=/backup/$(date +\%F-\%T)
+            volumeMounts:
+              - name: backup-volume
+                mountPath: /backup
+          restartPolicy: OnFailure
+          volumes:
+            - name: backup-volume
+              persistentVolumeClaim:
+                claimName: mongo-backup-pvc
